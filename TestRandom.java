@@ -2,5 +2,77 @@
 public  class  TestRandom {
 	public static void main(String[]  args) {
 	    // Replace this comment with your code
+		int hours = Integer.parseInt("" + args[0].charAt( 0) + args[0].charAt(1));
+		
+		// Does the same with the minutes part of the input.
+		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
+		String sMin;
+		String sHow;
+		
+		//System.out.println("Hours: " + hours);
+		//System.out.println("Minuts: " + minutes);
+		int add = Integer.parseInt((args [1]));
+		int hou = (add / 60 );
+		int min = (add % 60);
+
+		int addmin = (minutes + min);
+		int neWamin = (addmin / 60);
+		int neWmin = (addmin % 60);
+		    if (neWmin < 10){
+				sMin = ("0" + neWmin);
+			}
+			else{
+			    sMin = ("" + neWmin);
+			}
+	
+		int neWhou = (hours + hou + neWamin);
+			if  (neWhou > 23){
+				sHow = ( "" + (neWhou % 24));
+			}
+			else if ((neWhou % 24) < 10){
+				sHow = ("0" + (neWhou % 24));
+			}
+			else if (neWhou < 10){
+				sHow = ("0" + neWhou);
+			}
+			else {
+				sHow = ("" + neWhou);
+			}
+		System.out.println(sHow + ":" + sMin);
+		}
 	}
-}
+
+		
+		
+
+		//System.out.println(hours + hou + ":" + minutes + min);
+		//System.out.println("New hours: " + hou);
+		//System.out.println("New minutes: " + min);
+
+		//int min = Integer.parseInt("" + hou.charAt(2) + hou.charAt(3));
+
+
+		
+		//System.out.println("Minuts to add: " + add);
+		
+
+		//if (minutes < 10) {
+		//	 sMin = ("0" + minutes);
+		
+		//else{
+		//	 sMin = ("" + minutes);
+		//}
+		//System.out.println(hours);
+		//if (hours < 10){ 
+		//	sHou = ("0" + hours);
+		//}
+		//else{
+		//	sHou = ("" + hours);	
+		//}
+		//System.out.println(sHou + ":" + sMin);
+		//System.out.println((neWhou % 24) + ":" + (neWmin));
+
+		
+
+	
+
