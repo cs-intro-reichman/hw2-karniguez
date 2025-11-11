@@ -24,10 +24,15 @@ public class TimeCalc {
 	
 		int neWhou = (hours + hou + neWamin);
 			if  (neWhou > 23){
-				sHow = ( "" + (neWhou % 24));
-			}
-			else if ((neWhou % 24) < 10){
+				if ((neWhou % 24) < 10){
 				sHow = ("0" + (neWhou % 24));
+				}
+				else{
+				sHow = ( "" + (neWhou % 24));
+				}
+			}
+			else if (neWhou == 0)  {
+				sHow = ("0" + neWhou);	
 			}
 			else if (neWhou < 10){
 				sHow = ("0" + neWhou);
